@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clon Definitivo de Amazon - Bootstrap 5</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Paleta de colores exacta de Amazon */
+        body { background-color: #eaeded; font-family: Arial, sans-serif; }
+        .bg-amazon-dark { background-color: #131921 !important; }
+        .bg-amazon-light { background-color: #232f3e !important; }
+        .bg-amazon-gray { background-color: #37475a !important; }
+        .bg-amazon-legal { background-color: #131a22 !important; }
+        .text-amazon-blue { color: #007185 !important; }
+        
+        /* Estilos de interactividad sutiles */
+        .thumb-box { width: 40px; height: 40px; cursor: pointer; transition: all 0.1s; }
+        .thumb-box:hover, .thumb-box.active { border-color: #e77600 !important; box-shadow: 0 0 3px #e77600; }
+        .color-dot { width: 32px; height: 32px; border: 1px solid #a2a2a2; cursor: pointer; }
+        .color-dot.active { border: 2px solid #e77600 !important; }
+        
+        /* Enlaces del Footer */
+        .footer-link { color: #ddd !important; text-decoration: none; font-size: 0.85rem; }
+        .footer-link:hover { text-decoration: underline !important; color: #fff !important; }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid px-0">
+
+    <!-- ======================================================== -->
+    <!-- 1. HEADER PRINCIPAL (BARRA OSCURA DE BÚSQUEDA)           -->
+    <!-- ======================================================== -->
+    <header class="bg-amazon-dark py-2 px-3 text-white">
+        <div class="row align-items-center g-2">
+            
+            <!-- Logo y Ubicación -->
+            <div class="col-auto d-flex align-items-center gap-3">
+                <a href="#" class="text-white text-decoration-none fw-bold fs-4">amazon<span class="text-warning fs-6">.com.mx</span></a>
+                <div class="d-none d-lg-block text-start lh-sm" style="font-size: 0.75rem;">
+                    <span class="text-secondary d-block ps-3">Entrega en Gustavo A... 07100</span>
+                    <span class="fw-bold text-white">📍 Actualizar ubicación</span>
+                </div>
+            </div>
+
+            <!-- Buscador Dinámico -->
+            <div class="col mx-2">
+                <div class="input-group">
+                    <select class="form-select bg-light border-0 d-none d-sm-block text-secondary" style="max-width: 150px; font-size: 0.75rem;">
+                        <option>Todas las categorías</option>
+                    </select>
+                    <input type="text" class="form-control border-0" placeholder="Buscar en Amazon.com.mx" value="AirPods Max">
+                    <button class="btn btn-warning px-3 border-0" style="background-color: #febd69;">🔍</button>
+                </div>
+            </div>
+
+            <!-- Enlaces de Cuenta y Carrito -->
+            <div class="col-auto ms-auto d-flex align-items-center gap-3" style="font-size: 0.75rem;">
+                <a href="#" class="text-white text-decoration-none lh-sm d-none d-sm-block">
+                    Hola, identifícate <strong class="d-block fs-6 text-white">Cuenta y Listas ▾</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none lh-sm d-none d-md-block">
+                    Devoluciones <strong class="d-block fs-6 text-white">& Pedidos</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none d-flex align-items-center gap-1">
+                    <span class="fs-2">🛒</span>
+                    <div class="lh-sm">
+                        <span class="badge bg-warning text-dark rounded-pill d-block p-1 py-0 fw-bold">0</span>
+                        <span class="small d-none d-sm-inline fw-bold">Carrito</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ======================================================== -->
+    <!-- 2. SEGUNDA BARRA DE NAVEGACIÓN (CATEGORÍAS GENERALES)    -->
+    <!-- ======================================================== -->
+    <nav class="bg-amazon-light py-2 px-3 text-white d-flex align-items-center justify-content-between flex-wrap" style="font-size: 0.85rem;">
+        <div class="d-flex align-items-center flex-wrap gap-3">
+            <a href="#" class="text-white text-decoration-none fw-bold">☰ Todo</a>
+            <a href="#" class="text-white text-decoration-none">Vender</a>
+            <a href="#" class="text-white text-decoration-none">Restaurantes</a>
+            <a href="#" class="text-white text-decoration-none">Los más vendidos</a>
+            <a href="#" class="text-white text-decoration-none">Lo nuevo</a>
+            <a href="#" class="text-white text-decoration-none">Promociones</a>
+            <a href="#" class="text-white text-decoration-none">Outlet</a>
+            <a href="#" class="text-white text-decoration-none">AmazonBasics</a>
+        </div>
+    </nav>
+
+    <!-- ======================================================== -->
+    <!-- 3. TERCERA BARRA (SUB-NAV EXCLUSIVA DE APPLE DE image_73afaa.jpg) -->
+    <!-- ======================================================== -->
+    <div class="bg-white py-2 px-4 border-bottom" style="font-size: 0.75rem; background-color: #f5f5f7 !important;">
+        <div class="d-flex flex-wrap gap-4 align-items-center">
+            <a href="#" class="fw-bold text-dark text-decoration-none" style="font-size: 0.85rem;">Apple</a>
+            <a href="#" class="text-secondary text-decoration-none">iPhone</a>
+            <a href="#" class="text-secondary text-decoration-none">iPad</a>
+            <a href="#" class="text-secondary text-decoration-none">Apple Watch</a>
+            <a href="#" class="text-dark fw-bold text-decoration-none border-bottom border-dark pb-1">AirPods</a>
+            <a href="#" class="text-secondary text-decoration-none">Mac laptops</a>
+            <a href="#" class="text-secondary text-decoration-none">Mac desktops</a>
+            <a href="#" class="text-secondary text-decoration-none">Apple TV</a>
+            <a href="#" class="text-secondary text-decoration-none">Accesorios</a>
+            <a href="#" class="text-secondary text-decoration-none">Beats by Dr. Dre</a>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 4. SECCIÓN DE SELECCIÓN DE MODELOS HORIZONTAL (AIRPODS) -->
+    <!-- ======================================================== -->
+    <div class="bg-white py-3 border-bottom px-4">
+        <div class="row align-items-center g-3">
+            <div class="col-12 col-md-2 text-center text-md-start">
+                <h1 class="fw-bold m-0 text-dark" style="font-size: 1.7rem;">AirPods</h1>
+            </div>
+            <div class="col-12 col-md-10">
+                <div class="d-flex justify-content-around align-items-end flex-wrap gap-2 text-center" style="font-size: 0.75rem;">
+                    <a href="#" class="text-amazon-blue text-decoration-none" style="max-width: 110px;">
+                        <img src="https://th.bing.com/th/id/R.2cafd35258c8333ccd456454a4ef3691?rik=dsvwCVpJBDlxuQ&riu=http%3a%2f%2fodoo.pcdomino.com%2fweb%2fimage%2fproduct.template%2f29423%2fimage&ehk=XkU45RIRxKtab3yn7ief3Mqt9rG9dtaM9O1TZrgQZkk%3d&risl=&pid=ImgRaw&r=0" class="d-block mx-auto mb-2 img-fluid" style="height: 45px;">
+                        <span>AirPods Pro (3ra Generación)</span>
+                    </a>
+                    <a href="#" class="text-amazon-blue text-decoration-none" style="max-width: 110px;">
+                        <img src="https://es.t-mobile.com/sdcdn/dtmobile/content/dam/t-mobile/en-p/accessories/195949689604/195949689604-leftimage.png" class="d-block mx-auto mb-2 img-fluid" style="height: 45px;">
+                        <span>AirPods 4</span>
+                    </a>
+                    <a href="#" class="text-dark fw-bold text-decoration-none" style="max-width: 110px;">
+                        <img src="https://static.wikia.nocookie.net/ipod/images/c/c6/AirPods_Max_Lightning_silver_padded.png/revision/latest/thumbnail/width/360/height/450?cb=20240916081804" class="d-block mx-auto mb-2 img-fluid" style="height: 50px;">
+                        <span class="border-bottom border-2 border-dark pb-1">AirPods Max</span>
+                    </a>
+                    <a href="#" class="text-amazon-blue text-decoration-none" style="max-width: 110px;">
+                        <img src="https://images-cdn.ubuy.cr/653798678dd500665d1b27e9-origina-apple-earpods-lightning-wired.jpg" class="d-block mx-auto mb-2 img-fluid" style="height: 45px;">
+                        <span>Earpods</span>
+                    </a>
+                    <a href="#" class="text-amazon-blue text-decoration-none" style="max-width: 110px;">
+                        <img src="https://www.aduroproducts.com/cdn/shop/products/AP-8PKIT-Groupon_4200x2544-1.jpg?v=1577751135" class="d-block mx-auto mb-2 img-fluid" style="height: 45px;">
+                        <span>Airpods Accessories</span>
+                    </a>
+                    <a href="#" class="text-amazon-blue text-decoration-none" style="max-width: 110px;">
+                        <img src="https://www.apple.com/v/applecare/d/images/meta/ac__eh46qgda6qaa_og.png?202603160547" class="d-block mx-auto mb-2 img-fluid" style="height: 45px;">
+                        <span>Apple Care+</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 5. DETALLE COMPLETO DEL PRODUCTO (GRID TRIPLE DE AMAZON) -->
+    <!-- ======================================================== -->
+    <div class="bg-white py-4 px-4">
+        <div class="row g-4">
+            
+            <!-- COLUMNA 1: GALERÍA DE IMÁGENES -->
+            <div class="col-12 col-lg-5">
+                <div class="row">
+                    <!-- Tira vertical de Miniaturas -->
+                    <div class="col-2 col-sm-1 d-flex flex-column align-items-center">
+                        <div class="thumb-box active bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t1"></div>
+                        <div class="thumb-box bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t2"></div>
+                        <div class="thumb-box bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t3"></div>
+                        <div class="thumb-box bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t4"></div>
+                    </div>
+                    <!-- Foto Principal del Producto -->
+                    <div class="col-10 col-sm-11 text-center position-relative">
+                        <img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" alt="AirPods Max Principal" class="img-fluid" style="max-height: 420px; object-fit: contain;">
+                        <span class="position-absolute top-0 end-0 fs-4 text-secondary style-pointer">🔗</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA 2: BLOQUE DE PRECIOS, COLORES Y DESCRIPCIÓN (image_73afaa.jpg) -->
+            <div class="col-12 col-md-8 col-lg-4">
+                <h2 class="fs-5 fw-normal text-dark lh-base mb-1">
+                    Audífonos inalámbricos AirPods MAX de Apple,Cancelación Activa de Ruido Nivel Pro,Modo Ambiente,Audio Espacial Personalizado,Carga USB-C,audífonos Bluetooth para el iPhone - Azul Medianoche
+                </h2>
+                
+                <a href="#" class="text-amazon-blue text-decoration-none small d-block mb-1">Visita la tienda de Apple</a>
+                
+                <!-- Calificaciones -->
+                <div class="d-flex align-items-center mb-2" style="font-size: 0.85rem;">
+                    <span class="text-warning me-2">4.0 ★★★★☆</span>
+                    <a href="#" class="text-amazon-blue text-decoration-none">(217)</a>
+                </div>
+
+                <!-- Insignia Opción Amazon -->
+                <div class="mb-3">
+                    <span class="badge text-white px-2 py-1" style="background-color: #131921; font-size: 0.75rem;">
+                        Opción <span class="text-warning">Amazon</span>
+                    </span>
+                </div>
+
+                <hr class="my-2">
+
+                <!-- Área de Precios -->
+                <div class="my-3">
+                    <div class="d-flex align-items-start text-danger mb-1">
+                        <span class="fs-3 fw-light me-2">-15%</span>
+                        <div class="text-dark">
+                            <span class="fs-5 align-top">$</span>
+                            <span class="display-6 fw-semibold m-0 p-0 lh-1">11,047</span>
+                            <span class="fs-5 align-top">38</span>
+                        </div>
+                    </div>
+                    <div class="text-secondary small mb-2">
+                        Precio de lista: <span class="text-decoration-line-through">$12,999.00</span> 💡
+                    </div>
+                    
+                    <!-- Financiamiento -->
+                    <div class="fw-normal text-dark small">
+                        <span class="text-success fw-bold">$736.49</span> x15 meses sin intereses con BBVA <a href="#" class="text-amazon-blue text-decoration-none">Ver planes ▾</a>
+                    </div>
+
+                    <!-- Promoción -->
+                    <div class="mt-2">
+                        <span class="badge bg-success text-white rounded-1 py-1 px-2 fw-bold" style="font-size: 0.75rem; background-color: #56b257 !important;">Oferta</span>
+                        <span class="small text-secondary ms-1">90 días gratis de Amazon Music con compra <a href="#" class="text-amazon-blue text-decoration-none">Términos</a></span>
+                    </div>
+                </div>
+
+                <hr class="my-3">
+
+                <!-- Selector de Colores -->
+                <div class="mb-3">
+                    <span class="small text-secondary d-block mb-2">Color: <strong class="text-dark">Azul medianoche</strong></span>
+                    <div class="d-flex gap-2">
+                        <div class="color-dot active rounded-circle p-1 bg-dark" title="Azul medianoche"></div>
+                        <div class="color-dot rounded-circle p-1 bg-secondary-subtle" title="Plata"></div>
+                        <div class="color-dot rounded-circle p-1" style="background-color: #f7ded4;" title="Rosa"></div>
+                        <div class="color-dot rounded-circle p-1" style="background-color: #d1dacf;" title="Verde"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA 3: CAJA DE COMPRA LATERAL (image_73afaa.jpg) -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="border rounded-3 p-3 bg-white shadow-sm">
+                    <span class="text-amazon-blue fw-bold fs-5">prime</span>
+                    
+                    <p class="small text-dark mt-2 mb-3">
+                        Disfruta de entrega gratis y rápida; ofertas exclusivas, películas y series.
+                    </p>
+                    <a href="#" class="text-amazon-blue text-decoration-none small d-block mb-3">Únete a Prime</a>
+
+                    <!-- Detalles de Entrega -->
+                    <div class="small text-dark mb-3 lh-sm">
+                        <span class="d-block text-dark">$11,047<sup>38</sup></span>
+                        <span class="d-block mt-2">Entrega GRATIS el <strong>viernes, 29 de mayo</strong></span>
+                        <span class="d-block mt-2">O entrega más rápida <strong>mañana, 28 de mayo</strong>. Realiza el pedido en <strong>12 hrs 55 mins</strong></span>
+                    </div>
+
+                    <div class="small text-secondary mb-3">
+                        📍 Se entregará a Gustavo Adolfo Ma..., 07100: actualizar ubicación
+                    </div>
+
+                    <button class="btn btn-warning w-100 rounded-pill btn-sm py-2 mb-2 shadow-sm border-0" style="background-color: #ffd814; color: #0f1111;">
+                        Agregar al Carrito
+                    </button>
+                    <button class="btn w-100 rounded-pill btn-sm py-2 shadow-sm border-0" style="background-color: #ffa41c; color: #0f1111;">
+                        Comprar ahora
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+   
+    <!-- 6. FOOTER CORPORATIVO EXACTO DE LA IMAGEN (image_73abac.png) -->
+    
+    <footer>
+        <!-- Botón Superior "Inicio de Página" -->
+        
+        <!-- Bloque Central de 4 Columnas -->
+        <div class="bg-amazon-light py-5 text-white">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- Columna 1: Conócenos -->
+                    <div class="col-6 col-md-3 text-start">
+                        <h5 class="fs-6 fw-bold text-white mb-3">Conócenos</h5>
+                        <ul class="list-unstyled lh-sm small">
+                            <li class="mb-2"><a href="#" class="footer-link">Trabajar en Amazon</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Acerca de Amazon</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Información corporativa</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Departamento de prensa</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Amazon Science</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 2: Gana dinero con nosotros -->
+                    <div class="col-6 col-md-3 text-start">
+                        <h5 class="fs-6 fw-bold text-white mb-3">Gana dinero con nosotros</h5>
+                        <ul class="list-unstyled lh-sm small">
+                            <li class="mb-2"><a href="#" class="footer-link">Vender en Amazon</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Suministro para Amazon</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Protege y desarrolla tu marca</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Vender en Amazon Handmade</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Publica tu libro en Kindle</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Programa de afiliados</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Anuncia tus productos</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 3: Podemos ayudarte -->
+                    <div class="col-6 col-md-3 text-start">
+                        <h5 class="fs-6 fw-bold text-white mb-3">Podemos ayudarte</h5>
+                        <ul class="list-unstyled lh-sm small">
+                            <li class="mb-2"><a href="#" class="footer-link">Devolver o reemplazar productos</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Gestionar contenido y dispositivos</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Alertas de revisión y de seguridad del producto</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Lista de regalos</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Ayuda</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 4: Métodos de pago -->
+                    <div class="col-6 col-md-3 text-start">
+                        <h5 class="fs-6 fw-bold text-white mb-3">Métodos de pago</h5>
+                        <ul class="list-unstyled lh-sm small">
+                            <li class="mb-2"><a href="#" class="footer-link">Tarjetas de crédito y débito</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Tarjetas de regalo</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Pago en efectivo</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Pago a meses</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Pago en Quincenas</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Área de Logo e Idioma/País -->
+        <div class="bg-amazon-light py-4 text-center border-top border-secondary border-opacity-25 text-white" style="font-size: 0.85rem;">
+            <span class="fw-bold fs-5 me-3" style="letter-spacing: -1px;">amazon</span>
+            <div class="btn btn-outline-secondary btn-sm text-white border-secondary px-3 d-inline-flex align-items-center gap-2" style="font-size: 0.75rem;">
+                <span>🇲🇽</span> México
+            </div>
+        </div>
+
+        <!-- Franja de Derechos Legales Fijos -->
+        <div class="bg-amazon-legal py-4 text-center text-secondary" style="font-size: 0.75rem;">
+            <div class="container">
+                <div class="mb-2">
+                    <a href="#" class="text-white-50 text-decoration-none mx-2 small">Condiciones de uso</a>
+                    <span class="text-secondary">|</span>
+                    <a href="#" class="text-white-50 text-decoration-none mx-2 small">Aviso de privacidad</a>
+                </div>
+                <div class="text-secondary-50">
+                    © 1996-2026, Amazon.com, Inc. o sus afiliados
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Bootstrap 5 Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
