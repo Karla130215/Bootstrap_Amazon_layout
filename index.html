@@ -7,7 +7,7 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Paleta de colores exacta de Amazon */
+        
         body { background-color: #eaeded; font-family: Arial, sans-serif; }
         .bg-amazon-dark { background-color: #131921 !important; }
         .bg-amazon-light { background-color: #232f3e !important; }
@@ -15,13 +15,13 @@
         .bg-amazon-legal { background-color: #131a22 !important; }
         .text-amazon-blue { color: #007185 !important; }
         
-        /* Estilos de interactividad sutiles */
+        
         .thumb-box { width: 40px; height: 40px; cursor: pointer; transition: all 0.1s; }
         .thumb-box:hover, .thumb-box.active { border-color: #e77600 !important; box-shadow: 0 0 3px #e77600; }
         .color-dot { width: 32px; height: 32px; border: 1px solid #a2a2a2; cursor: pointer; }
         .color-dot.active { border: 2px solid #e77600 !important; }
         
-        /* Enlaces del Footer */
+        
         .footer-link { color: #ddd !important; text-decoration: none; font-size: 0.85rem; }
         .footer-link:hover { text-decoration: underline !important; color: #fff !important; }
     </style>
@@ -30,13 +30,11 @@
 
 <div class="container-fluid px-0">
 
-    <!-- ======================================================== -->
-    <!-- 1. HEADER PRINCIPAL (BARRA OSCURA DE BÚSQUEDA)           -->
-    <!-- ======================================================== -->
+  
     <header class="bg-amazon-dark py-2 px-3 text-white">
         <div class="row align-items-center g-2">
             
-            <!-- Logo y Ubicación -->
+           
             <div class="col-auto d-flex align-items-center gap-3">
                 <a href="#" class="text-white text-decoration-none fw-bold fs-4">amazon<span class="text-warning fs-6">.com.mx</span></a>
                 <div class="d-none d-lg-block text-start lh-sm" style="font-size: 0.75rem;">
@@ -45,7 +43,7 @@
                 </div>
             </div>
 
-            <!-- Buscador Dinámico -->
+            
             <div class="col mx-2">
                 <div class="input-group">
                     <select class="form-select bg-light border-0 d-none d-sm-block text-secondary" style="max-width: 150px; font-size: 0.75rem;">
@@ -56,7 +54,7 @@
                 </div>
             </div>
 
-            <!-- Enlaces de Cuenta y Carrito -->
+           
             <div class="col-auto ms-auto d-flex align-items-center gap-3" style="font-size: 0.75rem;">
                 <a href="#" class="text-white text-decoration-none lh-sm d-none d-sm-block">
                     Hola, identifícate <strong class="d-block fs-6 text-white">Cuenta y Listas ▾</strong>
@@ -76,9 +74,7 @@
         </div>
     </header>
 
-    <!-- ======================================================== -->
-    <!-- 2. SEGUNDA BARRA DE NAVEGACIÓN (CATEGORÍAS GENERALES)    -->
-    <!-- ======================================================== -->
+  
     <nav class="bg-amazon-light py-2 px-3 text-white d-flex align-items-center justify-content-between flex-wrap" style="font-size: 0.85rem;">
         <div class="d-flex align-items-center flex-wrap gap-3">
             <a href="#" class="text-white text-decoration-none fw-bold">☰ Todo</a>
@@ -92,9 +88,7 @@
         </div>
     </nav>
 
-    <!-- ======================================================== -->
-    <!-- 3. TERCERA BARRA (SUB-NAV EXCLUSIVA DE APPLE DE image_73afaa.jpg) -->
-    <!-- ======================================================== -->
+   
     <div class="bg-white py-2 px-4 border-bottom" style="font-size: 0.75rem; background-color: #f5f5f7 !important;">
         <div class="d-flex flex-wrap gap-4 align-items-center">
             <a href="#" class="fw-bold text-dark text-decoration-none" style="font-size: 0.85rem;">Apple</a>
@@ -110,9 +104,7 @@
         </div>
     </div>
 
-    <!-- ======================================================== -->
-    <!-- 4. SECCIÓN DE SELECCIÓN DE MODELOS HORIZONTAL (AIRPODS) -->
-    <!-- ======================================================== -->
+   
     <div class="bg-white py-3 border-bottom px-4">
         <div class="row align-items-center g-3">
             <div class="col-12 col-md-2 text-center text-md-start">
@@ -149,23 +141,21 @@
         </div>
     </div>
 
-    <!-- ======================================================== -->
-    <!-- 5. DETALLE COMPLETO DEL PRODUCTO (GRID TRIPLE DE AMAZON) -->
-    <!-- ======================================================== -->
+   
     <div class="bg-white py-4 px-4">
         <div class="row g-4">
             
-            <!-- COLUMNA 1: GALERÍA DE IMÁGENES -->
+            
             <div class="col-12 col-lg-5">
                 <div class="row">
-                    <!-- Tira vertical de Miniaturas -->
+                  
                     <div class="col-2 col-sm-1 d-flex flex-column align-items-center">
                         <div class="thumb-box active bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t1"></div>
                         <div class="thumb-box bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t2"></div>
                         <div class="thumb-box bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t3"></div>
                         <div class="thumb-box bg-white border p-1 rounded mb-2"><img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" class="img-fluid" alt="t4"></div>
                     </div>
-                    <!-- Foto Principal del Producto -->
+                    
                     <div class="col-10 col-sm-11 text-center position-relative">
                         <img src="https://content.macstore.mx/img/sku/ACCAPP786_FZ.jpg" alt="AirPods Max Principal" class="img-fluid" style="max-height: 420px; object-fit: contain;">
                         <span class="position-absolute top-0 end-0 fs-4 text-secondary style-pointer">🔗</span>
@@ -173,7 +163,7 @@
                 </div>
             </div>
 
-            <!-- COLUMNA 2: BLOQUE DE PRECIOS, COLORES Y DESCRIPCIÓN (image_73afaa.jpg) -->
+            
             <div class="col-12 col-md-8 col-lg-4">
                 <h2 class="fs-5 fw-normal text-dark lh-base mb-1">
                     Audífonos inalámbricos AirPods MAX de Apple,Cancelación Activa de Ruido Nivel Pro,Modo Ambiente,Audio Espacial Personalizado,Carga USB-C,audífonos Bluetooth para el iPhone - Azul Medianoche
@@ -181,13 +171,13 @@
                 
                 <a href="#" class="text-amazon-blue text-decoration-none small d-block mb-1">Visita la tienda de Apple</a>
                 
-                <!-- Calificaciones -->
+              
                 <div class="d-flex align-items-center mb-2" style="font-size: 0.85rem;">
                     <span class="text-warning me-2">4.0 ★★★★☆</span>
                     <a href="#" class="text-amazon-blue text-decoration-none">(217)</a>
                 </div>
 
-                <!-- Insignia Opción Amazon -->
+                
                 <div class="mb-3">
                     <span class="badge text-white px-2 py-1" style="background-color: #131921; font-size: 0.75rem;">
                         Opción <span class="text-warning">Amazon</span>
@@ -196,7 +186,7 @@
 
                 <hr class="my-2">
 
-                <!-- Área de Precios -->
+               
                 <div class="my-3">
                     <div class="d-flex align-items-start text-danger mb-1">
                         <span class="fs-3 fw-light me-2">-15%</span>
@@ -210,12 +200,12 @@
                         Precio de lista: <span class="text-decoration-line-through">$12,999.00</span> 💡
                     </div>
                     
-                    <!-- Financiamiento -->
+                
                     <div class="fw-normal text-dark small">
                         <span class="text-success fw-bold">$736.49</span> x15 meses sin intereses con BBVA <a href="#" class="text-amazon-blue text-decoration-none">Ver planes ▾</a>
                     </div>
 
-                    <!-- Promoción -->
+                    
                     <div class="mt-2">
                         <span class="badge bg-success text-white rounded-1 py-1 px-2 fw-bold" style="font-size: 0.75rem; background-color: #56b257 !important;">Oferta</span>
                         <span class="small text-secondary ms-1">90 días gratis de Amazon Music con compra <a href="#" class="text-amazon-blue text-decoration-none">Términos</a></span>
@@ -224,7 +214,7 @@
 
                 <hr class="my-3">
 
-                <!-- Selector de Colores -->
+               
                 <div class="mb-3">
                     <span class="small text-secondary d-block mb-2">Color: <strong class="text-dark">Azul medianoche</strong></span>
                     <div class="d-flex gap-2">
@@ -236,7 +226,7 @@
                 </div>
             </div>
 
-            <!-- COLUMNA 3: CAJA DE COMPRA LATERAL (image_73afaa.jpg) -->
+           
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="border rounded-3 p-3 bg-white shadow-sm">
                     <span class="text-amazon-blue fw-bold fs-5">prime</span>
@@ -246,7 +236,7 @@
                     </p>
                     <a href="#" class="text-amazon-blue text-decoration-none small d-block mb-3">Únete a Prime</a>
 
-                    <!-- Detalles de Entrega -->
+                 
                     <div class="small text-dark mb-3 lh-sm">
                         <span class="d-block text-dark">$11,047<sup>38</sup></span>
                         <span class="d-block mt-2">Entrega GRATIS el <strong>viernes, 29 de mayo</strong></span>
@@ -270,17 +260,17 @@
     </div>
 
    
-    <!-- 6. FOOTER CORPORATIVO EXACTO DE LA IMAGEN (image_73abac.png) -->
+    
     
     <footer>
-        <!-- Botón Superior "Inicio de Página" -->
         
-        <!-- Bloque Central de 4 Columnas -->
+        
+    
         <div class="bg-amazon-light py-5 text-white">
             <div class="container">
                 <div class="row g-4 justify-content-center">
                     
-                    <!-- Columna 1: Conócenos -->
+                    
                     <div class="col-6 col-md-3 text-start">
                         <h5 class="fs-6 fw-bold text-white mb-3">Conócenos</h5>
                         <ul class="list-unstyled lh-sm small">
@@ -292,7 +282,7 @@
                         </ul>
                     </div>
 
-                    <!-- Columna 2: Gana dinero con nosotros -->
+                   
                     <div class="col-6 col-md-3 text-start">
                         <h5 class="fs-6 fw-bold text-white mb-3">Gana dinero con nosotros</h5>
                         <ul class="list-unstyled lh-sm small">
@@ -306,7 +296,7 @@
                         </ul>
                     </div>
 
-                    <!-- Columna 3: Podemos ayudarte -->
+                    
                     <div class="col-6 col-md-3 text-start">
                         <h5 class="fs-6 fw-bold text-white mb-3">Podemos ayudarte</h5>
                         <ul class="list-unstyled lh-sm small">
@@ -318,7 +308,7 @@
                         </ul>
                     </div>
 
-                    <!-- Columna 4: Métodos de pago -->
+                    
                     <div class="col-6 col-md-3 text-start">
                         <h5 class="fs-6 fw-bold text-white mb-3">Métodos de pago</h5>
                         <ul class="list-unstyled lh-sm small">
@@ -334,7 +324,7 @@
             </div>
         </div>
 
-        <!-- Área de Logo e Idioma/País -->
+       
         <div class="bg-amazon-light py-4 text-center border-top border-secondary border-opacity-25 text-white" style="font-size: 0.85rem;">
             <span class="fw-bold fs-5 me-3" style="letter-spacing: -1px;">amazon</span>
             <div class="btn btn-outline-secondary btn-sm text-white border-secondary px-3 d-inline-flex align-items-center gap-2" style="font-size: 0.75rem;">
@@ -342,7 +332,7 @@
             </div>
         </div>
 
-        <!-- Franja de Derechos Legales Fijos -->
+       
         <div class="bg-amazon-legal py-4 text-center text-secondary" style="font-size: 0.75rem;">
             <div class="container">
                 <div class="mb-2">
@@ -359,7 +349,7 @@
 
 </div>
 
-<!-- Bootstrap 5 Bundle JS -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
